@@ -1,0 +1,23 @@
+.card{
+width: 250px;
+padding: 0;
+cursor: pointer;
+transition: .2s all ease-out;
+}
+.card:hover{
+  transform: scale(1.05);
+  transition: .15s all ease-in;
+}
+.flag{
+  background-size: cover;
+  /* width: 249px; */
+  height: 150px;
+padding: 0;
+}
+.details h2{
+font-weight: 800;
+font-size: 20px;
+}
+.details strong{
+  font-weight: 600;
+  }

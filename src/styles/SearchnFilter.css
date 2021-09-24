@@ -1,0 +1,13 @@
+.searchInput,.filterInput{
+  border: none;
+  border-radius: 5px;
+}
+
+.searchInput{
+width: 370px;
+padding: 12px 30px;
+font-family:Arial, FontAwesome;
+}
+.filterInput{
+  padding: 12px 15px;
+}
