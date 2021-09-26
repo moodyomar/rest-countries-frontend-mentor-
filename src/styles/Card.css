@@ -3,16 +3,25 @@ width: 250px;
 padding: 0;
 cursor: pointer;
 transition: .2s all ease-out;
+border-radius: 5px;
 }
 .card:hover{
   transform: scale(1.05);
   transition: .15s all ease-in;
 }
+.card.dark{
+  background-color: var(--Dark-Blue);
+}
+
+a{
+  text-decoration: none;
+  color: inherit !important;
+}
 .flag{
   background-size: cover;
-  /* width: 249px; */
+  border-radius: 5px 5px 0px 0px;
   height: 150px;
-padding: 0;
+  padding: 0;
 }
 .details h2{
 font-weight: 800;

@@ -1,3 +1,6 @@
+.searchNfilter{
+  display: flex;
+}
 .searchInput,.filterInput{
   border: none;
   border-radius: 5px;
@@ -10,4 +13,24 @@ font-family:Arial, FontAwesome;
 }
 .filterInput{
   padding: 12px 15px;
+}
+
+.searchInput.dark,
+.filterInput.dark{
+  background-color: var(--Dark-Blue);
+  color: var(--White);
+  transition: .2s all;
+}
+
+@media screen and (max-width: 650px) {
+  .searchNfilter{
+    flex-direction: column;
+gap: 40px;
+  }
+  .filterInput{
+width: 250px;
+  }
+  .searchInput{
+    width: 250px;
+  }
 }

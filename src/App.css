@@ -5,7 +5,7 @@
 /* (Dark Mode Elements) */
 --Very-Dark-Blue : hsl(207, 26%, 17%);
 /* (Dark Mode Background) */
---Very-Dark-Blue : hsl(200, 15%, 8%);
+--Very-Dark-Blue : #202C37;
 /* (Light Mode Text) */
 --Dark-Gray: hsl(0, 0%, 52%);
 /* (Light Mode Input) */
@@ -16,27 +16,30 @@
 
 
 /* The designs were created to the following widths:
-
 - Mobile: 375px
 - Desktop: 1440px */
 
 
 --Homepage-Items: 14px;
 --Detail-Page: 16px ;
-
 --font: 'Nunito Sans', sans-serif;
-/* - Weights: 300, 600, 800 */
 
-/* - [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com) */
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-body{
-  background-color: var(--Very-Light-Gray);
   font-family: var(--font);
+}
+
+.light{
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  transition: .2s all;
+}
+
+.dark{
+  background-color: var(--Very-Dark-Blue);
+  color: var(--White);
+  transition: .2s all;
 }

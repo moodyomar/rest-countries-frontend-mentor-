@@ -1,0 +1,50 @@
+strong{
+  font-weight: 600;
+}
+.lng{
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+.flagy{
+  height: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.butn{
+  width: 90px;
+  height: 35px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+  border-radius: 5px;
+}
+.butn.dark{
+  background-color: var(--Dark-Blue);
+}
+.butn.light{
+  background-color: var(--White);
+}
+.lng.dark{
+  background-color: var(--Dark-Blue);
+}
+.lng.light{
+  background-color: var(--White);
+}
+
+
+
+@media screen and (max-width: 1099px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}

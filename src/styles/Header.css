@@ -5,4 +5,13 @@ h2{
 
 p{
   font-weight: 600;
+  cursor: pointer;
+}
+
+.header.dark{
+  background-color: var(--Dark-Blue);
+}
+
+.header.light{
+background: var(--White);
 }

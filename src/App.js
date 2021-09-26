@@ -1,27 +1,35 @@
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route} from "react-router-dom";
-import Header from './components/Header';
-import SearchnFilter from './components/SearchnFilter';
 import Home from './components/Home';
+import Header from './components/Header';
+import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
+import { GlobalProvider } from './Context/State'
+import CountryInfo from './components/CountryInfo';
+
+
 
 function App() {
+
+
+
+
   return (
-    <div className="App">
-    <Router>
-      <header>
-      <Route exact path="/" component={Header}/>
-      <Route exact path="/" component={SearchnFilter}/>
-      </header>
-      <main>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-        </Switch>
-      </main>
-    </Router>
-    </div>
+    <GlobalProvider>
+      <Router>
+
+        <header>
+          <Header />
+        </header>
+
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/info-about/:country" component={CountryInfo} />
+          </Switch>
+        </main>
+
+
+      </Router>
+    </GlobalProvider>
   );
 }
 
