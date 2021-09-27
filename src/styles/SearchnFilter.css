@@ -1,9 +1,11 @@
 .searchNfilter{
   display: flex;
+  padding: 60px;
 }
 .searchInput,.filterInput{
   border: none;
   border-radius: 5px;
+  background-color: var(--White);
 }
 
 .searchInput{
@@ -26,11 +28,13 @@ font-family:Arial, FontAwesome;
   .searchNfilter{
     flex-direction: column;
 gap: 40px;
+padding: 20px 50px;
   }
   .filterInput{
 width: 250px;
   }
   .searchInput{
-    width: 250px;
+    width: 100%;
+  
   }
 }

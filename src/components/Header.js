@@ -9,7 +9,7 @@ const Header = () => {
 
 return(
 
-<div className={`header shadow-sm ${theme} container-fluid px-5 p-2 d-flex  align-items-center justify-content-between`}>
+<div className={`header shadow-sm ${theme} container-fluid px-5 p-4 d-flex  align-items-center justify-content-between`}>
 <h2>Where in the world?</h2>
 <p onClick={theme === 'light' ? switchToDark : switchToLight}>
   {theme === 'light' ? 

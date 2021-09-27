@@ -1,17 +1,26 @@
 h2{
   font-weight: 600;
   font-size: 25px;
+  margin-bottom: 0px;
 }
 
 p{
   font-weight: 600;
   cursor: pointer;
+  margin-bottom: 0px;
 }
-
 .header.dark{
   background-color: var(--Dark-Blue);
 }
 
 .header.light{
 background: var(--White);
+}
+@media screen and (max-width: 650px) {
+h2{
+font-size: 18px;
+}
+p{
+font-size: 15px;
+}
 }

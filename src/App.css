@@ -32,6 +32,10 @@
   font-family: var(--font);
 }
 
+.home{
+  height: 100%;
+  min-height: 100vh;
+}
 .light{
   background-color: var(--Very-Light-Gray);
   color: var(--Very-Dark-Blue);

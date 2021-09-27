@@ -8,7 +8,6 @@ const Home = () => {
 let [countries,setCountries] = useState([])
 let [filterBy,setFilterBy] = useState('all')
 let [searchFor,setSearchFor] = useState('')
-
 const {theme } = useContext(GlobalContext)
 
 const fetchApi = async() => {
@@ -19,10 +18,10 @@ setCountries(data)
 }
 
   useEffect(() => {
-    searchFor.length < 2 ? fetchApi() :
+    searchFor.length < 1 ? fetchApi() :
     onSearch()
-
-},[filterBy,searchFor])
+    document.body.classList.toggle = theme
+},[filterBy,searchFor,theme])
 
 
 const onSearch = () => {
@@ -33,20 +32,23 @@ return(
 
 <>
 
-<div className={`px-5 ${theme}`}>
+<div className={`home ${theme}`}>
 
   <SearchnFilter
   filterBy={setFilterBy}
   theme={theme}
   searchFor={setSearchFor} />
 
+
+
   <div className="row d-flex justify-content-center">
-    {countries.map(country => (
+  {countries.slice(0,24).map(country => (
 <Card key={country.name} country={country} theme={theme}/>
 
-    ))}
+  ))}
 
-  </div>
+</div>
+
 
 </div>
 
