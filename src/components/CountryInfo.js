@@ -15,20 +15,18 @@ const [showMore,toggleShow] = useState(false);
 const {country} = useParams();
 const {theme } = useContext(GlobalContext);
 
-let {nativeName,population,capital,region,languages,currencies,topLevelDomain,continent,flags,name,borders} = getCountry;
+let {nativeName,population,capital,region,languages,currencies,topLevelDomain,continent,flag,name,borders} = getCountry;
 
-
-  useEffect(async() => {
-    const data = await axios.get(`https://restcountries.com/v2/name/${country}`)
-    .then(res => res.data)
-    .catch(err =>  err)
-    setCountry(data[0])
-    console.log(flags);
-    
+useEffect(() => {
+  fetchApi()
 },[])
 
-
-
+const fetchApi = async() => {
+const data = await axios.get(`https://restcountries.com/v2/name/${country}`)
+.then(res => res.data)
+.catch(err =>  err)
+setCountry(data[0]) 
+}
 
 return(
 
@@ -43,7 +41,7 @@ Back</Link>
 <div className="infoSection px-5">
 
 <div className="the-flag mb-5">
-<div className="img" style={{backgroundImage:`url(${flags[0]})`}}></div>
+<div className="img" style={{backgroundImage:`url(${flag})`}}></div>
 </div>
 
 <div className="details">

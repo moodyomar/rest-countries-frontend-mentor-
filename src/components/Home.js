@@ -15,8 +15,6 @@ const data = await axios.get(`https://restcountries.com/v2/${filterBy}`)
 .then(res => res.data)
 .catch(err =>  err)
 setCountries(data)
-console.log(data);
-
 }
 
   useEffect(() => {
